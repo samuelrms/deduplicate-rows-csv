@@ -1,4 +1,4 @@
 .env
 
-data/
-docs/
+data*/
+docs*/
