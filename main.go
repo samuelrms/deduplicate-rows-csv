@@ -7,9 +7,15 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	err := godotenv.Load()
+	if err != nil {
+		fmt.Println("Error loading .env file")
+	}
 	inputName := os.Getenv("INPUT_NAME")
 	if inputName == "" {
 		inputName = "dados.csv"
